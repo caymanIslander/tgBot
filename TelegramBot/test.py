@@ -1,12 +1,12 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-
+# Hello world
 
 async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello {update.effective_user.first_name}')
 
 
-app = ApplicationBuilder().token("6393246040:AAGREGwRNY1N5zG1RyttErIcYYRRvii5Ipo").build()
+app = ApplicationBuilder().token("").build()
 
 app.add_handler(CommandHandler("hello", hello))
 
